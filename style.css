@@ -1,9 +1,12 @@
+/* COLOR PALETTE & VARIABLES */
 :root {
-    --hero-orange: #c06124;
+    --orange-hero: #c06124;
     --bg-cream: #e4e0dd;
-    --text-dark: #333;
+    --text-black: #000000;
+    --white: #ffffff;
 }
 
+/* GENERAL STYLES */
 * {
     margin: 0;
     padding: 0;
@@ -11,121 +14,52 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif; /* Charlevoix is a premium font; using Poppins as fallback */
+    font-family: 'Poppins', sans-serif;
     background-color: var(--bg-cream);
-    color: var(--text-dark);
+    color: var(--text-black);
     line-height: 1.6;
 }
 
-/* Sticky Navigation */
+/* STICKY NAVIGATION */
 .sticky-nav {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
+    width: 100%;
     background-color: var(--bg-cream);
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 0 40px;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+.nav-logo {
+    height: 24px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-dark);
+    color: var(--text-black);
     font-weight: 600;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin-left: 25px;
 }
 
-.nav-email {
-    color: var(--hero-orange) !important;
+.contact-link {
+    color: var(--orange-hero) !important;
 }
 
-/* Hero Section */
-.hero {
-    background-color: var(--hero-orange);
-    min-height: 80vh;
-    padding: 60px 5%;
-    display: flex;
-    align-items: center;
-    color: white;
-}
-
-.hero-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.hero-title-img {
-    max-width: 400px;
-    margin-bottom: -20px; /* Slight overlap for style */
-    display: block;
-}
-
-.hero-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.profile-img {
-    width: 300px;
-    filter: grayscale(100%);
-    border-radius: 4px;
-}
-
-.hero-text {
-    max-width: 500px;
-    font-size: 1.2rem;
-}
-
-/* Work Grid - Fixing Symmetry */
-.section-padding {
-    padding: 80px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.work-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.work-card {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.work-card h3 {
-    color: var(--hero-orange);
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-.work-card ul {
-    list-style: none;
-}
-
-.work-card li {
-    margin-bottom: 10px;
-    font-size: 0.95rem;
-}
-
-.footer {
-    text-align: center;
-    padding: 40px;
-    font-size: 0.8rem;
-    opacity: 0.6;
-}
+/* HERO SECTION (PAGE 1) */
+.hero-section {
+    background-color: var(--orange-hero);
+    min-height: 100vh;
+    padding: 100px 40px;
+    color: var(--white);
+    display: flex
